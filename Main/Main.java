@@ -1,71 +1,35 @@
 package Main;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-import kelas.BiayaSewaKontrak;
-import kelas.PemilikProperti;
-import kelas.Properti;
+import kelas.CabangPerusahaan;
+import kelas.Karyawan;
+import kelas.AdminKontrak;
+import kelas.RumahTinggal;
+
 public class Main {
-  private static List<BiayaSewaKontrak> list_biaya_sewa_kontrak = new ArrayList<BiayaSewaKontrak>();
-  private static List<PemilikProperti> list_pemilik_properti = new ArrayList<PemilikProperti>();
+  public static void main(String args[]) {
+    CabangPerusahaan perusahaan_a = new CabangPerusahaan();
+    perusahaan_a.setNama("Perusahaan Tali");
+    perusahaan_a.setAlamat("Jalan Sutomo");
 
-  public static boolean cekBiayaSewaDuplikat(double biaya, String tanggal_efektif) {
-    for(int i = 0; i < list_biaya_sewa_kontrak.size(); i++) {
-      if(list_biaya_sewa_kontrak.get(i).biaya() == biaya && list_biaya_sewa_kontrak.get(i).getStringTanggalEfektif() == tanggal_efektif) {
-        return true;
-      }
-    }
-    return false;
-  }
-  
-  public static boolean cekDuplikatPemilikProperti(String nama, String domisili) {
-    for(int i = 0; i < list_pemilik_properti.size(); i++) {
-      if(list_pemilik_properti.get(i).nama() == nama && list_pemilik_properti.get(i).domisili() == domisili) {
-        return true;
-      }
-    }
-    return false;
-  }
+    Set<Karyawan> list_karyawan = new HashSet<>();
+    Karyawan adryan = new Karyawan("Adryan", "085212321421");
+    Karyawan ken = new Karyawan("Ken", "12345623423");
 
-  public static BiayaSewaKontrak getBiayaSewaTerbaru() {
-    return list_biaya_sewa_kontrak.get(list_biaya_sewa_kontrak.size() - 1);
-  }
-  
-  public static void addBiayaSewaKontrak(double biaya, String tanggal_efektif) {
-    try {
-      BiayaSewaKontrak biaya_sewa = new BiayaSewaKontrak(biaya, tanggal_efektif);
+    list_karyawan.add(adryan);
+    list_karyawan.add(ken);
 
-      // validasi pada tanggal yang sama, harga harus berbeda
-      if(cekBiayaSewaDuplikat(biaya, tanggal_efektif) == true) {
-        System.out.println("Biaya sewa sudah ada");
-        return;
-      }
-      
-      list_biaya_sewa_kontrak.add(biaya_sewa);
-    } catch (Exception e) {
-      System.out.println("Format tanggal salah");
-    }
-  }
+    perusahaan_a.setKaryawan(list_karyawan);
+    System.out.println(perusahaan_a.getKaryawan());
 
-  public static void addPemilikProperti(String nama, String domisili)  {
-    if(cekDuplikatPemilikProperti(nama, domisili) == true) {
-      System.out.println("Pemilik properti sudah ada");
-      return;
-    }
-    PemilikProperti pemilik = new PemilikProperti(nama, domisili);
-    list_pemilik_properti.add(pemilik);
-  }
+    RumahTinggal rumah = new RumahTinggal();
+    rumah.setAlamat("Jalan Rela");
+    rumah.setPanjang(11.5);
+    rumah.setLebar(5.6);
+    rumah.setJumlahKamar(3);
+    rumah.setJumlahKamarMandi(2);
+    rumah.setJumlahLantai(1);
 
-  public static void main(String[] args) {
-    addBiayaSewaKontrak(5000000, "30/10/2020");
-    PemilikProperti jeni = new PemilikProperti("Jennifer", "Pematangsiantar");
-    
-    Properti podomoro = new Properti("Apartment", 50, "Medan");
-    podomoro.setBiayaSewaKontrak(getBiayaSewaTerbaru());
-    podomoro.setPemilikProperti(jeni);
-
-    System.out.println(podomoro.getPemilikProperti().nama());
-  }
-  
-
-}
+    System.out.println(rumah.getLuas());
+   
+}}

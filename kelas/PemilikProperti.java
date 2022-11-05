@@ -2,26 +2,30 @@ package kelas;
 
 public class PemilikProperti {
   private String nama;
-  private String domisili;
+  private String nomor_telepon;
+  private String alamat;
 
-  public PemilikProperti(String nama, String domisili) {
+  public void setNama(String nama) {
     this.nama = nama;
-    this.domisili = domisili;
   }
 
-  public void setNama(String nama_baru) {
-    this.nama = nama_baru;
+  public void setNomorTelepon(String nomor_telepon) {
+    this.nomor_telepon = nomor_telepon;
   }
 
-  public String nama() {
+  public void setAlamat(String alamat) {
+    this.alamat = alamat;
+  }
+
+  public String getNama(){
     return this.nama;
   }
 
-  public void setDomisili(String domisili) {
-    this.domisili = domisili;
+  public String getNomorTelepon(){
+    return this.nomor_telepon;
   }
 
-  public String domisili() {
-    return this.domisili;
+  public String getAlamat(){
+    return this.alamat;
   }
 }
