@@ -3,7 +3,6 @@ import java.util.*;
 
 import kelas.CabangPerusahaan;
 import kelas.Karyawan;
-import kelas.AdminKontrak;
 import kelas.RumahTinggal;
 
 public class Main {
