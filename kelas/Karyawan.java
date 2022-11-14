@@ -4,6 +4,7 @@ public class Karyawan {
   private String nama;
   private String nomor_telepon;
   private String alamat;
+  private String jabatan;
 
   public Karyawan(String nama, String nomor_telepon) {
     this.nama = nama;
@@ -22,6 +23,10 @@ public class Karyawan {
     this.alamat = alamat;
   }
 
+  public void setJabatan(String jabatan) {
+    this.jabatan = jabatan;
+  }
+
   public String getNama(){
     return this.nama;
   }
@@ -32,5 +37,9 @@ public class Karyawan {
 
   public String getAlamat(){
     return this.alamat;
+  }
+
+  public String getJabatan(){
+    return this.jabatan;
   }
 }
