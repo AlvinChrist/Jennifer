@@ -42,4 +42,5 @@ public class Karyawan {
   public String getJabatan(){
     return this.jabatan;
   }
+
 }
