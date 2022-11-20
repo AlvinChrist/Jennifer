@@ -9,13 +9,13 @@ import java.time.format.DateTimeFormatter;
 public class Transaksi {
     private String jenis_transaksi;
     private LocalDate tanggal_transaksi;
-    private DateTImeFormatter format = DateTimeFormatter.ofPatter('dd/MM/yyyy');
+    private DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     
     public void setJenisTransaksi(String jenis_transaksi){
         this.jenis_transaksi = jenis_transaksi;
     }
 
-    public void setTanggalTransaksi(String tanggal_transaksi) thorws ParseException {
+    public void setTanggalTransaksi(String tanggal_transaksi) throws ParseException {
       this.tanggal_transaksi = LocalDate.parse(tanggal_transaksi, format);
     }
 

@@ -2,13 +2,13 @@ package kelas;
 
 import java.util.*;
 import kelas.Karyawan;
-import kelas.AdminKontrak;
+import kelas.Kontrak;
 
 public class CabangPerusahaan {
     private String nama;
     private String alamat;
     private Set<Karyawan> karyawan;
-    private Set<AdminKontrak> admin_kontrak;
+    private Set<Kontrak> kontrak;
 
     public void setNama(String nama) {
       this.nama = nama;
@@ -22,8 +22,8 @@ public class CabangPerusahaan {
       this.karyawan = karyawan;
     }
 
-    public void setAdminKontrak(Set<AdminKontrak> admin_kontrak) {
-      this.admin_kontrak = admin_kontrak;
+    public void setKontrak(Set<Kontrak> kontrak) {
+      this.kontrak = kontrak;
     }
   
     public String getNama(){
@@ -38,7 +38,7 @@ public class CabangPerusahaan {
       return this.karyawan;
     }
 
-    public Set<AdminKontrak> getAdminKontrak() {
-      return this.admin_kontrak;
+    public Set<Kontrak> getKontrak() {
+      return this.kontrak;
     }
 }

@@ -30,3 +30,4 @@ public class Penyewa {
   public String getAlamat() {
     return this.alamat;
   }
+}

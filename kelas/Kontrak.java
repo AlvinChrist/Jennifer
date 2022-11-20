@@ -9,17 +9,17 @@ import java.time.format.DateTimeFormatter;
 public class Kontrak {
   private double harga_sewa;
   private LocalDate tanggal_efektif;
-  private DateTImeFormatter format = DateTimeFormatter.ofPatter('dd/MM/yyyy');
+  private DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
   public Kontrak() {
     this.tanggal_efektif = LocalDate.now();
   }
 
   public void setHargaSewa(double harga_sewa) {
-    this.harga_sewa = harga_sewa
+    this.harga_sewa = harga_sewa;
   }
 
-  public void setTanggalEfektif(String tanggal_efektif) thorws ParseException {
+  public void setTanggalEfektif(String tanggal_efektif) throws ParseException {
     this.tanggal_efektif = LocalDate.parse(tanggal_efektif, format);
   }
   

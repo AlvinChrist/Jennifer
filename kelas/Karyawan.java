@@ -43,4 +43,13 @@ public class Karyawan {
     return this.jabatan;
   }
 
+  public int gaji(){
+    int gaji_karyawan;
+    if (jabatan == "Admin"){
+      gaji_karyawan = 5000000;
+    } else {
+      gaji_karyawan = 4000000;
+    }
+    return gaji_karyawan;
+  }
 }

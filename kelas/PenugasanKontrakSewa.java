@@ -13,15 +13,15 @@ public class PenugasanKontrakSewa {
       private LocalDate tanggal_akhir;
       private String tujuan;
       private String keputusan;
-      private DateTimeFormatter format = DateTimeFormatter.ofPatter('dd/MM/yyyy');
+      private DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
       private Kontrak kontrak;
       private Transaksi transaksi;
     
-      public void setTanggalAwal(String tanggal_awal) thorws ParseException {
+      public void setTanggalAwal(String tanggal_awal) throws ParseException {
         this.tanggal_awal = LocalDate.parse(tanggal_awal, format);
       }
 
-      public void setTanggalAkhir(String tanggal_akhir) thorws ParseException {
+      public void setTanggalAkhir(String tanggal_akhir) throws ParseException {
         this.tanggal_akhir = LocalDate.parse(tanggal_akhir, format);
       }
       

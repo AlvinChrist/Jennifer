@@ -8,7 +8,7 @@ class Gedung extends Properti {
   private int jumlah_lantai;
   private Set<RuangUsaha> ruang_usaha;
 
-  public Gudang() {
+  public Gedung() {
     super();
     this.jumlah_lantai = 0;
     this.ruang_usaha = new HashSet<>();
@@ -18,7 +18,7 @@ class Gedung extends Properti {
     this.jumlah_lantai = jumlah_lantai;
   }
 
-  public void getJumlahLantai() {
+  public int getJumlahLantai() {
     return this.jumlah_lantai;
   }
 
@@ -26,7 +26,7 @@ class Gedung extends Properti {
     this.ruang_usaha = ruang_usaha;
   }
 
-  public void getRuangUsaha() {
+  public Set<RuangUsaha> getRuangUsaha() {
     return this.ruang_usaha;
   }
 }
