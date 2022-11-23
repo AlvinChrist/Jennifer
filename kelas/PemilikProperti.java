@@ -28,4 +28,10 @@ public class PemilikProperti {
   public String getAlamat(){
     return this.alamat;
   }
+
+  public void dataPemilikProperti(){
+    System.out.println("Nama         : " + nama);
+    System.out.println("Nomor Telepon: " +nomor_telepon);
+    System.out.println("Alamat       : " + alamat);
+  }
 }

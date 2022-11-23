@@ -52,4 +52,12 @@ public class Karyawan {
     }
     return gaji_karyawan;
   }
+
+  public void dataKaryawan(){
+    System.out.println("Nama          : " + nama);
+    System.out.println("Alamat        : " + alamat);
+    System.out.println("Nomor Telepon :" + nomor_telepon);
+    System.out.println("Jabatan       :" + jabatan);
+    System.out.println("Gaji          :" +gaji());
+  }
 }

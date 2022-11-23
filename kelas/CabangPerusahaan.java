@@ -7,6 +7,7 @@ import kelas.Kontrak;
 public class CabangPerusahaan {
     private String nama;
     private String alamat;
+    private String domisili;
     private Set<Karyawan> karyawan;
     private Set<Kontrak> kontrak;
 
@@ -41,4 +42,13 @@ public class CabangPerusahaan {
     public Set<Kontrak> getKontrak() {
       return this.kontrak;
     }
+
+    public void setDomisili(String domisili){
+      this.domisili = domisili;
+    }
+
+    public String getDomisili(){
+      return this.domisili;
+    }
+
 }

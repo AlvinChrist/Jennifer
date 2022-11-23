@@ -30,4 +30,10 @@ public class Penyewa {
   public String getAlamat() {
     return this.alamat;
   }
+
+  public void dataPenyewa(){
+    System.out.println("Nama         : " + nama);
+    System.out.println("Nomor Telepon: " +nomor_telepon);
+    System.out.println("Alamat       : " + alamat);
+  }
 }
