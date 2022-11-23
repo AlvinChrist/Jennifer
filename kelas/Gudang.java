@@ -2,18 +2,18 @@ package kelas;
 import kelas.Properti;
 
 class Gudang extends Properti {
-  private int jumlah_lantai;
+  private int ketinggian;
 
   public Gudang() {
     super();
-    this.jumlah_lantai = 0;
+    this.ketinggian = 0;
   }
 
-  public void setJumlahLantai(int jumlah_lantai) {
-    this.jumlah_lantai = jumlah_lantai;
+  public void setJumlahLantai(int ketinggian) {
+    this.ketinggian = ketinggian;
   }
 
   public int getJumlahLantai() {
-    return this.jumlah_lantai;
+    return this.ketinggian;
   }
 }

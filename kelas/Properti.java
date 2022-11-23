@@ -1,11 +1,9 @@
 package kelas;
 
-public class Properti {
-  private String alamat;
-  private double panjang;
-  private double lebar;
-
-  public Properti() {}
+public abstract class Properti {
+  protected String alamat;
+  protected double panjang;
+  protected double lebar;
 
   public void setAlamat(String alamat) {
     this.alamat = alamat;
