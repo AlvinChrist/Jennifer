@@ -4,6 +4,7 @@ public abstract class Properti {
   protected String alamat;
   protected double panjang;
   protected double lebar;
+  protected String tipe;
 
   public void setAlamat(String alamat) {
     this.alamat = alamat;
@@ -31,5 +32,13 @@ public abstract class Properti {
 
   public double getLuas() {
     return this.panjang * this.lebar;
+  }
+
+  public void dataProperti(){
+    System.out.println("Tipe properti   : " +tipe);
+    System.out.println("Alamat properti : " +alamat);
+    System.out.println("Panjang         : " +panjang);
+    System.out.println("Lebar           : " +lebar);
+    System.out.println("Luas            : " +getLuas());
   }
 }

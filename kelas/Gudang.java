@@ -3,6 +3,7 @@ import kelas.Properti;
 
 class Gudang extends Properti {
   private int ketinggian;
+  public String tipe = "Gudang";
 
   public Gudang() {
     super();

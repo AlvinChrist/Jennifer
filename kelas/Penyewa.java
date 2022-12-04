@@ -1,9 +1,12 @@
 package kelas;
+import kelas.Properti;
+import java.util.HashSet;
 
 public class Penyewa {
   private String nama;
   private String nomor_telepon;
   private String alamat;
+  private HashSet<Properti> list_properti;
 
   public Penyewa() {}
 
@@ -35,5 +38,15 @@ public class Penyewa {
     System.out.println("Nama         : " + nama);
     System.out.println("Nomor Telepon: " +nomor_telepon);
     System.out.println("Alamat       : " + alamat);
+  }
+
+  public void addProperti(Properti properti) {
+    this.list_properti.add(properti);
+  }
+
+  public void getProperti(){
+    for (Properti properti: list_properti){
+      properti.dataProperti();
+    }
   }
 }

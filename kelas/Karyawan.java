@@ -58,6 +58,6 @@ public class Karyawan {
     System.out.println("Alamat        : " + alamat);
     System.out.println("Nomor Telepon :" + nomor_telepon);
     System.out.println("Jabatan       :" + jabatan);
-    System.out.println("Gaji          :" +gaji());
+    System.out.println("Gaji          :" + gaji());
   }
 }

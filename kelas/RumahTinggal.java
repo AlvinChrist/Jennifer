@@ -2,6 +2,7 @@ package kelas;
 import kelas.Properti;
 
 public class RumahTinggal extends Properti {
+  public String tipe = "Rumah Tinggal";
   private int jumlah_kamar;
   private int jumlah_kamar_mandi;
   private int jumlah_lantai;

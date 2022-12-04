@@ -4,6 +4,7 @@ import kelas.Properti;
 public class RuangUsaha extends Properti {
   private String nomor_lantai;
   private String nomor_toko;
+  public String tipe = "Ruang Usaha";
 
   public RuangUsaha() {
     super();

@@ -1,9 +1,12 @@
 package kelas;
+import kelas.Properti;
+import java.util.HashSet;
 
 public class PemilikProperti {
   private String nama;
   private String nomor_telepon;
   private String alamat;
+  private HashSet<Properti> list_properti;
 
   public void setNama(String nama) {
     this.nama = nama;
@@ -34,4 +37,15 @@ public class PemilikProperti {
     System.out.println("Nomor Telepon: " +nomor_telepon);
     System.out.println("Alamat       : " + alamat);
   }
+
+  public void addProperti(Properti properti) {
+    this.list_properti.add(properti);
+  }
+
+  public void getProperti(){
+    for (Properti properti: list_properti){
+      properti.dataProperti();
+    }
+  }
+
 }

@@ -2,14 +2,17 @@ package kelas;
 
 import java.util.*;
 import kelas.Karyawan;
-import kelas.Kontrak;
+import kelas.PenugasanKontrakSewa;
+import kelas.Properti;
+import java.util.HashSet;
 
 public class CabangPerusahaan {
     private String nama;
     private String alamat;
     private String domisili;
     private Set<Karyawan> karyawan;
-    private Set<Kontrak> kontrak;
+    private Set<PenugasanKontrakSewa> penugasan_kontrak_sewa;
+    private HashSet<Properti> list_properti;
 
     public void setNama(String nama) {
       this.nama = nama;
@@ -21,10 +24,6 @@ public class CabangPerusahaan {
 
     public void setKaryawan(Set<Karyawan> karyawan) {
       this.karyawan = karyawan;
-    }
-
-    public void setKontrak(Set<Kontrak> kontrak) {
-      this.kontrak = kontrak;
     }
   
     public String getNama(){
@@ -39,8 +38,12 @@ public class CabangPerusahaan {
       return this.karyawan;
     }
 
-    public Set<Kontrak> getKontrak() {
-      return this.kontrak;
+    public void setPenugasanKontrakSewa(Set<PenugasanKontrakSewa> penugasan_kontrak_sewa) {
+      this.penugasan_kontrak_sewa = penugasan_kontrak_sewa;
+    }
+
+    public Set<PenugasanKontrakSewa> getPenugasanKontrakSewa() {
+      return this.penugasan_kontrak_sewa;
     }
 
     public void setDomisili(String domisili){
@@ -51,4 +54,13 @@ public class CabangPerusahaan {
       return this.domisili;
     }
 
+    public void addProperti(Properti properti) {
+      this.list_properti.add(properti);
+    }
+  
+    public void getProperti(){
+      for (Properti properti: list_properti){
+        properti.dataProperti();
+      }
+    }
 }

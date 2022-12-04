@@ -7,6 +7,7 @@ import kelas.RuangUsaha;
 class Gedung extends Properti {
   private int jumlah_lantai;
   private Set<RuangUsaha> ruang_usaha;
+  public String tipe = "Gedung";
 
   public Gedung() {
     super();
